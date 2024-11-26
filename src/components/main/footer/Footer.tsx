@@ -1,9 +1,13 @@
+import Container from "../../container/Container";
+
 export default function Footer() {
   return (
     <footer>
-      <p className="dark:text-white text-center py-5">
-        سایت شخصی سینا پیرزاده :)
-      </p>
+      <Container>
+        <p className="dark:text-white text-center  my-10 text-lg rounded "> 
+          سایت شخصی سینا پیرزاده :)
+        </p>
+      </Container>
     </footer>
   );
 }

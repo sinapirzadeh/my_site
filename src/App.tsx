@@ -1,15 +1,17 @@
 import { Route, Routes } from "react-router-dom";
 import Layout from "./components/layout/Layout";
 import Home from "./pages/Home";
+import ArticleList from "./pages/ArticleList";
+import Article from "./pages/Article";
 
 export default function App() {
   return (
-    <div className="dark:bg-slate-800 bg-slate-100  transition font-Vazir text-gray-600 bg-row">
-      <Layout>
-        <Routes>
-          <Route path="/" element={<Home />} />
-        </Routes>
-      </Layout>
-    </div>
+    <Layout>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/blog" element={<ArticleList />} />
+        <Route path="/blog/article" element={<Article />} />
+      </Routes>
+    </Layout>
   );
 }

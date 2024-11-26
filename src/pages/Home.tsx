@@ -8,7 +8,6 @@ export default function Home() {
   return (
     <>
       <section>
-        {/* <!-- about-us --> */}
         <Profile />
       </section>
       <section id="skills">
@@ -19,7 +18,7 @@ export default function Home() {
         <Projects />
       </section>
 
-      <section id="blogs">
+      <section>
         <HomeArticles />
       </section>
 
