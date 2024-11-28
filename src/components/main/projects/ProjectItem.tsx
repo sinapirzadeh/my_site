@@ -17,7 +17,7 @@ export default function ProjectItem() {
         <img src={image} alt="" />
       </a>
       <div className="absolute bg-white dark:bg-gray-600 -bottom-24 w-72 p-3 flex flex-col gap-1 group-hover:-bottom-0 group-hover:duration-600 duration-500">
-        <span className="text-blue-600 dark:text-gray-300 font-bold text-xs">
+        <span className="text-blue-600 dark:text-yellow-300 font-bold text-xs">
           Django - React
         </span>
         <h4 className="text-gray-800 dark:text-white font-bold text-2xl">
