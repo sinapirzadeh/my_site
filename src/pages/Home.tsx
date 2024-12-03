@@ -10,6 +10,7 @@ export default function Home() {
       <section>
         <Profile />
       </section>
+
       <section id="skills">
         <Skills />
       </section>
