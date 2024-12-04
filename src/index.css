@@ -9,6 +9,10 @@
   }
 }
 
+.Toastify__toast {
+  font-family: "Vazir", sans-serif !important;
+}
+
 img {
   -moz-user-select: none;
   -webkit-user-select: none;
