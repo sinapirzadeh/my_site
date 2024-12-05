@@ -3,11 +3,13 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import MainRouter from "./routers/MainRouter";
 import AdminRouter from "./routers/AdminRouter";
+import AdminPanel from "./pages/admin/AdminPanel";
+import AnimationCaracter from "./components/layout/AnimationCaracter";
 
 export default function App() {
   return (
     <Layout>
-      <AdminRouter />
+      <AnimationCaracter />
       <MainRouter />
       <ToastContainer />
     </Layout>

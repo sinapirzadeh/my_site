@@ -1,17 +1,15 @@
-import { NavLink, Route, Routes } from "react-router-dom";
+import { BrowserRouter, NavLink, Route, Routes } from "react-router-dom";
 import Container from "../../components/container/Container";
 import { HiOutlineSquares2X2 } from "react-icons/hi2";
-import Dashbord from "./Dashbord";
-import SkillsPanel from "./SkillsPanel";
-import { useState } from "react";
+import Dashbord from "./dashbord/Dashbord";
+import SkillsPanel from "./skills/SkillsPanel";
 
 export default function AdminPanel() {
-  const [baseUrl] = useState("/admin/");
-
   return (
     <div>
       <Container>
         <div className="grid grid-cols-12 my-20 mx-5 gap-5">
+          {/* Sidebar */}
           <div className="col-span-3 max-md:col-span-12 bg-slate-300 dark:bg-slate-500 rounded-lg p-10 dark:text-gray-300 ">
             <ul className="space-y-5">
               <li>
@@ -46,16 +44,15 @@ export default function AdminPanel() {
               </li>
             </ul>
           </div>
+
+          {/* Content */}
           <div className="col-span-9 max-md:col-span-12 bg-slate-300 dark:bg-slate-500 rounded-lg p-10 dark:text-white">
-            <Routes>
-              <Route path={`${baseUrl}`} element={<Dashbord />} />
-              <Route path={`${baseUrl}profile`} element={<Dashbord />} />
-              <Route path={`${baseUrl}skills`} element={<SkillsPanel />} />
-              <Route path={`${baseUrl}projects`} element={<Dashbord />} />
-              <Route path={`${baseUrl}blog`} element={<Dashbord />} />
-              <Route path={`${baseUrl}article/:id`} element={<Dashbord />} />
-              <Route path={`${baseUrl}contact`} element={<Dashbord />} />
-            </Routes>
+            <BrowserRouter>
+              <Routes>
+                <Route path="/admin" element={<Dashbord />} />
+                <Route path="/admin/skills" element={<SkillsPanel />} />
+              </Routes>
+            </BrowserRouter>
           </div>
         </div>
       </Container>

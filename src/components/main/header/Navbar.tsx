@@ -44,14 +44,14 @@ export default function Navbar() {
             <ul className="flex justify-around text-lg font-semibold animate-fade">
               <li className="dark:text-white flex  items-center transition-colors hover:text-blue-400 ml-6">
                 <HiOutlineBolt size={25} />
-                <a className="pr-1 font-light" href="#skills">
+                <a className="pr-1 font-light" href="/#skills">
                   مهارت ها
                 </a>
               </li>
               <li className="dark:text-white flex  items-center transition-colors hover:text-blue-400 ml-6">
                 <HiOutlineCube size={25} />
 
-                <a className="pr-1 font-light" href="#projects">
+                <a className="pr-1 font-light" href="/#projects">
                   پروژه ها
                 </a>
               </li>
@@ -63,7 +63,7 @@ export default function Navbar() {
               </li>
               <li className="dark:text-white flex  items-center transition-colors hover:text-blue-400 ml-6">
                 <HiOutlinePhone size={25} />
-                <a className="pr-1 font-light" href="#contact">
+                <a className="pr-1 font-light" href="/#contact">
                   تماس با ما
                 </a>
               </li>
@@ -118,13 +118,13 @@ export default function Navbar() {
                 <ul className="space-y-4 text-lg font-semibold">
                   <li className="text-white flex items-center transition-colors bg-blue-500 p-2 rounded-md active:bg-blue-600">
                     <HiOutlineBolt size={25} />
-                    <a className="pr-1 font-light" href="#skills">
+                    <a className="pr-1 font-light" href="/#skills">
                       مهارت ها
                     </a>
                   </li>
                   <li className="text-white flex items-center transition-colors bg-blue-500 p-2 rounded-md active:bg-blue-600">
                     <HiOutlineCube size={25} />
-                    <a className="pr-1 font-light" href="#projects">
+                    <a className="pr-1 font-light" href="/#projects">
                       پروژه ها
                     </a>
                   </li>
@@ -136,7 +136,7 @@ export default function Navbar() {
                   </li>
                   <li className="text-white flex items-center transition-colors bg-blue-500 p-2 rounded-md active:bg-blue-600">
                     <HiOutlinePhone size={25} />
-                    <a className="pr-1 font-light" href="#contact">
+                    <a className="pr-1 font-light" href="/#contact">
                       تماس با ما
                     </a>
                   </li>
