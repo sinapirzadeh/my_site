@@ -37,7 +37,7 @@ export default function BtnTheme() {
       <motion.button
         className="p-4 bg-blue-600 text-white rounded-full shadow-lg"
         onClick={toggleTheme}
-        whileHover={{ scale: 1.2 }}
+        whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9, rotate: 15 }}
         transition={{ type: "spring", stiffness: 300 }}
       >

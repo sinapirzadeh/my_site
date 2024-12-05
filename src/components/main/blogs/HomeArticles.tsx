@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Container from "../../container/Container";
 import ArticleItem from "./ArticleItem";
 import { motion } from "motion/react";
+import LoadingProjectArticle from "../../layout/loadings/LoadingProjectArticle";
 
 export default function HomeArticles() {
   return (
@@ -24,7 +25,7 @@ export default function HomeArticles() {
             <HiArrowLeft size={25} />
           </motion.div>
         </div>
-
+        <LoadingProjectArticle />
         <div className="grid grid-cols-3 max-md:grid-cols-1 gap-20">
           <ArticleItem />
           <ArticleItem />

@@ -1,5 +1,5 @@
 export default function Dashbord() {
   return (
-    <div>Dashbord</div>
+    <div>fdsa</div>
   )
 }

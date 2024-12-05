@@ -6,7 +6,7 @@ import SkillsPanel from "./SkillsPanel";
 import { useState } from "react";
 
 export default function AdminPanel() {
-  const [baseUrl] = useState("admin/");
+  const [baseUrl] = useState("/admin/");
 
   return (
     <div>
@@ -38,7 +38,7 @@ export default function AdminPanel() {
                         : "dark:text-slate-300 text-gray-600"
                     }`
                   }
-                  to="/skills"
+                  to="/admin/skills"
                 >
                   <HiOutlineSquares2X2 size={30} />
                   <span className="mr-1">مهارت ها</span>

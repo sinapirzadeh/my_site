@@ -1,4 +1,5 @@
 import Container from "../../container/Container";
+import LoadingProjectArticle from "../../layout/loadings/LoadingProjectArticle";
 import ProjectItem from "./ProjectItem";
 
 export default function Projects() {
@@ -10,11 +11,10 @@ export default function Projects() {
           پروژه های برنامه نویسی شده و نمونه کار ها
         </p>
       </div>
+        <LoadingProjectArticle />
       <div className="mx-5 md:mx-24 my-20 grid grid-cols-4 max-md:grid-cols-2 max-sm:grid-cols-1 gap-10 ">
         <ProjectItem />
-        <ProjectItem />
-        <ProjectItem />
-        <ProjectItem />
+
       </div>
     </Container>
   );
