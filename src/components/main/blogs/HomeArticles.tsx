@@ -19,7 +19,7 @@ export default function HomeArticles() {
             whileTap={{ scale: 0.9 }}
             className="hover:animate-jump p-2 bg-blue-500 rounded-md text-white flex"
           >
-            <Link to={"/articles"} className="pl-3">
+            <Link to={"/blog"} className="pl-3">
               مشاهده همه
             </Link>
             <HiArrowLeft size={25} />

@@ -1,5 +1,3 @@
 export default function Dashbord() {
-  return (
-    <div>fdsafdsafdsafds</div>
-  )
+  return <h1>hashbord!</h1>;
 }

@@ -29,7 +29,8 @@ export default function AnimeNotification() {
         >
           <Link to={"/anime1331"}>
             <img
-              src="./../../../public/images/path-to-anime-image.webp"
+              // src="./../../../public/images/path-to-anime-image.webp"
+              src="./../../../public/images/path-to-anime-image.jpg"
               alt="Anime Character"
               className="w-16 h-16 rounded-full ring-2  ring-white"
             />

@@ -3,8 +3,12 @@ import Btn from "../Btns/Btn";
 
 type TChildrenType = {
   children: React.ReactNode;
+  modul_title: String;
 };
-export default function Modal({ children }: TChildrenType) {
+export default function Modal({
+  children,
+  modul_title = "افزودن",
+}: TChildrenType) {
   const [isOpen, setIsOpen] = useState(false);
 
   const openModal = () => setIsOpen(true);
@@ -18,9 +22,9 @@ export default function Modal({ children }: TChildrenType) {
       {isOpen && (
         <div className=" flex items-center justify-center">
           <div className="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center z-50">
-            <div className="bg-white rounded-lg shadow-lg w-1/3 p-6">
-              <h2 className="text-xl font-semibold mb-4">This is a Modal</h2>
-              <p className="text-gray-700 mb-6">{children}</p>
+            <div className="bg-white dark:bg-slate-500  rounded-lg shadow-lg max-md:w-2/3 w-1/3 p-6">
+              <h2 className="text-xl font-semibold mb-4">{modul_title}</h2>
+              <p className=" mb-6">{children}</p>
               <div className="flex justify-end">
                 <button
                   onClick={closeModal}
