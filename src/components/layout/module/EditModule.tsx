@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 import Btn from "../Btns/Btn";
-import { HiOutlinePlus } from "react-icons/hi2";
+import { HiOutlinePencilSquare } from "react-icons/hi2";
 
 type TChildrenType = {
   children: React.ReactNode;
   modul_title: String;
   btn_title: String;
 };
-export default function AddModal({
+export default function EditModule({
   children,
-  modul_title = "افزودن",
-  btn_title = "افزودن",
+  modul_title = "ویرایش",
+  btn_title = "ویرایش",
 }: TChildrenType) {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -19,12 +19,8 @@ export default function AddModal({
 
   return (
     <>
-      <Btn
-        onClick={openModal}
-        bg_color="bg-green-500"
-        customClasses="mb-10 flex"
-      >
-        <HiOutlinePlus size={25} className="border-2 ml-2 rounded-lg" />
+      <Btn onClick={openModal} bg_color="bg-yellow-500" customClasses="mt-5 flex">
+        <HiOutlinePencilSquare size={25} className="ml-2"/>
         {btn_title}
       </Btn>
       {isOpen && (

@@ -1,8 +1,8 @@
-import Modal from "../../../components/layout/module/AddModule";
+import EditModule from "../../../components/layout/module/EditModule";
 
-export default function AddProfile() {
+export default function EditProfile() {
   return (
-    <Modal modul_title="افزودن پروفایل">
+    <EditModule modul_title="پروفایل" btn_title={"پروفایل"}>
       <form>
         <div className="gap-5 mb-4 grid grid-cols-2 max-sm:grid-cols-1">
           <input
@@ -43,16 +43,15 @@ export default function AddProfile() {
             required
           />
         </div>
-        <div className="grid w-full max-w-xs items-center gap-1.5">
+        <div className="grid w-full max-w-xs items-center gap-1.5 my-3">
           <label className="text-sm text-gray-400 font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
-            Picture
+            پروفایل تان را انتخاب کنید
           </label>
           <input
             id="picture"
             type="file"
             className="flex h-10 w-full rounded-md border border-input bg-white px-3 py-2 text-sm text-gray-400 file:border-0 file:bg-transparent file:text-gray-600 file:text-sm file:font-medium"
           />
-          
         </div>
         <textarea
           className="w-full px-4 py-2 bg-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 transition duration-300"
@@ -60,12 +59,12 @@ export default function AddProfile() {
           required
         ></textarea>
         <button
-          className="w-full bg-green-500 text-white dark:bg-green-400 dark:text-gray-800 py-2 px-4 rounded-lg hover:bg-indigo-400 transition duration-300"
+          className="w-full bg-yellow-500 text-white dark:bg-yellow-400 dark:text-gray-800 py-2 px-4 rounded-lg hover:bg-indigo-400 transition duration-300"
           type="submit"
         >
-          افزودن
+          انجام شود
         </button>
       </form>
-    </Modal>
+    </EditModule>
   );
 }

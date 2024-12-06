@@ -1,8 +1,8 @@
-import Modal from "../../../components/layout/module/AddModule";
+import AddModal from "../../../components/layout/module/AddModule";
 
 export default function AddSkill() {
   return (
-    <Modal modul_title="افزودن مهارت جدید">
+    <AddModal modul_title="افزودن مهارت جدید" btn_title={'افزودن مهارت'}>
       <form>
         <div className="gap-5 mb-4 grid grid-cols-2 max-sm:grid-cols-1">
           <input
@@ -29,6 +29,6 @@ export default function AddSkill() {
           افزودن
         </button>
       </form>
-    </Modal>
+    </AddModal>
   );
 }
