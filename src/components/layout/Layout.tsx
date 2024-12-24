@@ -1,15 +1,14 @@
+import { Outlet } from "react-router-dom";
 import Footer from "../main/footer/Footer";
 import Header from "../main/header/Header";
 
-type TLayout = {
-  children: React.ReactNode;
-};
-
-export default function Layout({ children }: TLayout) {
+export default function Layout() {
   return (
     <>
       <Header />
-      <main>{children}</main>
+      <main>
+        <Outlet />
+      </main>
       <Footer />
     </>
   );

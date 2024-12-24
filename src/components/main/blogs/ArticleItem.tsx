@@ -1,41 +1,36 @@
 import { motion } from "motion/react";
-import {
-  HiOutlineChatBubbleLeftEllipsis,
-  HiOutlineHeart,
-} from "react-icons/hi2";
 import { Link } from "react-router-dom";
+import { IArticleType } from "../../types/types";
+import { FaHeart } from "react-icons/fa";
+import { FaCommentAlt } from "react-icons/fa";
 
-export default function ArticleItem() {
+export default function ArticleItem(article: IArticleType) {
   return (
-    <motion.div
-      drag
-      whileInView={{ opacity: [0, 1] }}
-      whileHover={{ scale: 1.1 }}
-      whileTap={{ scale: 0.95 }}
-      className="m-auto flex w-80 flex-col rounded-xl dark:bg-gray-600 bg-white bg-clip-border text-gray-700 shadow-md cursor-pointer"
-    >
-        <div className="relative  mx-4 -mt-6 h-40 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40 bg-gradient-to-r from-blue-400 to-blue-700">
-          <img src="../../../../public/imagss/projects/1.jpg" alt="" />
-        </div>
-        <div className="p-6">
-          <h4 className="mb-2 block text-lg  dark:text-white">برنامه نویسی</h4>
-          <p className="dark:text-gray-300 line-clamp-1">
-            برنامه نویس چگونه است و با چه زبان های باید شروع کنیم ...
-          </p>
-          <Link className="text-blue-700 dark:text-yellow-300  text-gl " to={"/blog/1"}>
-          مشاهده مقاله
-          </Link>
-          <div className="flex mt-3 dark:text-white">
-            <span className="flex pl-3">
-              <HiOutlineHeart size={20} />
-              <span className="pr-1">0</span>
+    <Link to={`/blog/${article?.slug}`} className="m-auto">
+      <motion.div
+        whileInView={{ opacity: [0, 1] }}
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        className="bg-white w-80 dark:bg-slate-700 dark:text-white text-gray-800 rounded-2xl shadow-xl hover:shadow transition-all"
+      >
+        <div className="p-2">
+          <img
+            className="rounded-2xl shadow-xl w-80 h-48"
+            src={article?.image}
+            alt={article?.image_alt}
+          />
+          <div className="-mt-4 flex justify-end ml-3 gap-2 z-50">
+            <span className="flex gap-1 p-2 rounded-2xl bg-slate-50 dark:bg-slate-600  shadow-lg">
+              <FaCommentAlt size={20} className="text-blue-500 " /> 
             </span>
-            <span className="flex items-center">
-              <HiOutlineChatBubbleLeftEllipsis size={20} />
-              <span className="pr-1">0</span>
+            <span className="flex gap-1 p-2 rounded-2xl bg-slate-50 dark:bg-slate-600  shadow-lg">
+              {article?.like_count}
+              <FaHeart size={20} className="text-red-500" />
             </span>
           </div>
+          <h2 className="text-xl text-center my-2">{article?.title}</h2>
         </div>
-    </motion.div>
+      </motion.div>
+    </Link>
   );
 }

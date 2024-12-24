@@ -1,5 +1,5 @@
-import { useGetData } from "../../../hooks/useGetData";
-import { getProfile } from "../../../services/api";
+import { useGetData } from "../../../hooks/api/useGetData";
+import { getProfile } from "../../../services/site/HomeApi";
 import Container from "../../container/Container";
 import LoadingProfile from "../../layout/loadings/LoadingProfile";
 import { IProfileType } from "../../types/types";
@@ -7,11 +7,14 @@ import ProfileAbout from "./ProfileAbout";
 import { motion } from "motion/react";
 
 export default function Profile() {
-  const { data: profile, loading } = useGetData<IProfileType>(getProfile);
+  const { data: profile, isLoading } = useGetData<IProfileType>(
+    "profile",
+    getProfile
+  );
 
   return (
     <Container>
-      {loading ? (
+      {isLoading ? (
         <LoadingProfile />
       ) : (
         <motion.div
