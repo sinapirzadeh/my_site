@@ -4,8 +4,15 @@ import Container from "../../container/Container";
 import ArticleItem from "./ArticleItem";
 import { motion } from "motion/react";
 import LoadingProjectArticle from "../../layout/loadings/LoadingProjectArticle";
+import { useGetData } from "../../../hooks/api/useGetData";
+import { getArticlesHome } from "../../../services/site/HomeApi";
+import { IArticleType } from "../../types/types";
 
 export default function HomeArticles() {
+  const { data: articles, isLoading } = useGetData<IArticleType[]>(
+    "article_home",
+    getArticlesHome
+  );
   return (
     <div className="my-10 z-0">
       <Container>
@@ -25,11 +32,9 @@ export default function HomeArticles() {
             <HiArrowLeft size={25} />
           </motion.div>
         </div>
-        <LoadingProjectArticle />
+        {isLoading && <LoadingProjectArticle />}
         <div className="grid grid-cols-3 max-md:grid-cols-1 gap-20">
-          <ArticleItem />
-          <ArticleItem />
-          <ArticleItem />
+          {articles && articles.map((article) => <ArticleItem {...article} />)}
         </div>
       </Container>
     </div>

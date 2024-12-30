@@ -42,3 +42,10 @@ export interface IArticleType {
   short_url: string;
   tags: string;
 }
+
+export interface ICommentType {
+  name: string;
+  message: string;
+  is_trusted: boolean;
+  is_delete: boolean;
+}

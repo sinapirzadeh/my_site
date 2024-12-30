@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from "motion/react";
 import { useEffect, useState } from "react";
 import { HiMiniMoon, HiOutlineSun } from "react-icons/hi2";
+import BtnLan from "./BtnLan";
 
 export default function BtnTheme() {
   const [isDark, setIsDark] = useState(false);
@@ -33,7 +34,8 @@ export default function BtnTheme() {
   };
 
   return (
-    <div>
+    <div className="flex items-center">
+      <div className=" ml-2 "><BtnLan /></div>
       <motion.button
         className="p-4 bg-blue-600 text-white rounded-full shadow-lg"
         onClick={toggleTheme}

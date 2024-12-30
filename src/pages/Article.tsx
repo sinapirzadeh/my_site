@@ -1,15 +1,13 @@
 import { Link, useParams } from "react-router-dom";
 import Container from "../components/container/Container";
-import { FaCommentAlt, FaClock, FaHeart } from "react-icons/fa";
+import { FaCommentAlt, FaClock } from "react-icons/fa";
 import ArticleProfile from "../components/main/article/ArticleProfile";
-import ShortLink from "../components/main/article/ShortLink";
 import AddCommetn from "../components/main/article/comment/AddCommetn";
 import Comments from "../components/main/article/comment/Comments";
 import { IArticleType } from "../components/types/types";
 import { getArticle } from "../services/site/BlogApi";
 import ArticleDetailLoding from "../components/layout/loadings/ArticleDetailLoding";
 import ArticlessLoading from "../components/layout/loadings/ArticlessLoading";
-import SetLink from "../components/main/article/SetLink";
 import { HiOutlineHome } from "react-icons/hi2";
 import { Helmet } from "react-helmet-async";
 import { useGetDataBySlug } from "../hooks/api/useGetDataBySlug";
@@ -69,24 +67,26 @@ export default function Article() {
                       </span>
                       <FaClock size={25} />
                     </span>
-                    <span className="flex items-center bg-red-500 p-2 rounded-lg shadow-lg">
+                    {/* <span className="flex items-center bg-red-500 p-2 rounded-lg shadow-lg">
                       <span className="pl-2">{article?.like_count}</span>
                       <FaHeart size={25} />
-                    </span>
+                    </span> */}
                     <span className="flex items-center bg-blue-500 p-2 rounded-lg shadow-lg">
                       <span className="pl-2">{article?.comments_count}</span>
                       <FaCommentAlt size={25} />
                     </span>
                   </div>
                 </div>
-                <div className="mx-6">
+                <div className="mx-6 ">
                   <img
-                    className="border-2 w-1/2 rounded-2xl m-auto my-6"
+                    className="border-2 w-1/2 rounded-2xl m-auto my-20 max-md:w-auto"
                     src={article?.image}
                     alt={article?.image_alt}
                   />
 
-                  <p className="text-justify leading-10 py-8">{article?.description}</p>
+                  <p className="text-justify leading-10 py-8">
+                    {article?.description}
+                  </p>
                 </div>
               </>
             )}
@@ -99,7 +99,7 @@ export default function Article() {
               <ShortLink shortLink={article?.short_url as string} />
             )} */}
             {/* {isLoading ? <ArticlessLoading /> : <Tagse tags={article?.tags as string} />} */}
-            <SetLink />
+            {/* <SetLink slug={article?.slug as string} /> */}
             <AddCommetn />
             {isLoading ? <ArticlessLoading /> : <Comments />}
           </div>

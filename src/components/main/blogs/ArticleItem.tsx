@@ -21,12 +21,13 @@ export default function ArticleItem(article: IArticleType) {
           />
           <div className="-mt-4 flex justify-end ml-3 gap-2 z-50">
             <span className="flex gap-1 p-2 rounded-2xl bg-slate-50 dark:bg-slate-600  shadow-lg">
-              <FaCommentAlt size={20} className="text-blue-500 " /> 
+              <FaCommentAlt size={20} className="text-blue-500 " />
             </span>
-            <span className="flex gap-1 p-2 rounded-2xl bg-slate-50 dark:bg-slate-600  shadow-lg">
+            {/* like Counter */}
+            {/* <span className="flex gap-1 p-2 rounded-2xl bg-slate-50 dark:bg-slate-600  shadow-lg">
               {article?.like_count}
               <FaHeart size={20} className="text-red-500" />
-            </span>
+            </span> */}
           </div>
           <h2 className="text-xl text-center my-2">{article?.title}</h2>
         </div>

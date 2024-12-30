@@ -1,17 +1,28 @@
-import { motion } from "motion/react";
-import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import { useState } from "react";
 import { AiOutlineDislike, AiOutlineLike } from "react-icons/ai";
 import { toast } from "react-toastify";
+import { getLike } from "../../../services/site/BlogApi";
+import { useQuery } from "@tanstack/react-query";
 
-export default function SetLink() {
-  const [isVisible, setIsVisible] = useState(false);
+export default function SetLink({ slug }: { slug: string }) {
+  const [isVisible, setIsVisible] = useState(true);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsVisible(true);
-    }, 5000);
-    return () => clearTimeout(timer);
-  }, [isVisible]);
+  const { data: likeMessage, refetch } = useQuery({
+    queryKey: ["like", slug],
+    queryFn: () => getLike(slug),
+    enabled: false, // جلوگیری از اجرای پیش‌فرض
+  });
+
+  const handleLikeClick = async () => {
+    try {
+      const { data } = await refetch(); // داده‌ها را دوباره از سرور دریافت کنید
+      toast.success(data || "نظر شما ثبت شد!");
+      setIsVisible(false);
+    } catch (error) {
+      toast.error("مشکلی پیش آمد، دوباره تلاش کنید.");
+    }
+  };
 
   return (
     <>
@@ -24,10 +35,7 @@ export default function SetLink() {
         >
           <span className="text-lg font-medium">محتوا برایتان مفید بود؟</span>
           <motion.div
-            onClick={() => {
-              toast.success("خوشحالیم که محتوا برایتان مفید بود");
-              setIsVisible(false);
-            }}
+            onClick={handleLikeClick}
             whileHover={{
               scale: 1.2,
               backgroundColor: "#f97316",
