@@ -7,7 +7,7 @@ export default function Pagination() {
       <motion.button
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
-        className="px-3 py-2 bg-white dark:bg-yellow-300  rounded-md shadow-lg"
+        className="px-3 py-2 bg-white dark:bg-blue-600 text-white rounded-md shadow-lg"
       >
         <HiArrowSmallRight size={20} />
       </motion.button>
@@ -15,14 +15,14 @@ export default function Pagination() {
       <motion.button
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
-        className="px-4 py-2 bg-white dark:bg-yellow-300   rounded-md shadow-lg "
+        className="px-4 py-2 bg-white dark:bg-blue-600 text-white  rounded-md shadow-lg "
       >
         1
       </motion.button>
       <motion.button
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
-        className="px-3 py-2 bg-white dark:bg-yellow-300  rounded-md shadow-lg"
+        className="px-3 py-2 bg-white dark:bg-blue-600 text-white rounded-md shadow-lg"
       >
         <HiArrowSmallLeft size={20} />
       </motion.button>

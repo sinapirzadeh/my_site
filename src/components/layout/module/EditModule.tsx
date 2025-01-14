@@ -19,15 +19,17 @@ export default function EditModule({
 
   return (
     <>
-      <Btn onClick={openModal} bg_color="bg-yellow-500" customClasses="mt-5 flex">
-        <HiOutlinePencilSquare size={25} className="ml-2"/>
+      <Btn onClick={openModal} bg_color="bg-blue-600" customClasses="mt-5 flex">
+        <HiOutlinePencilSquare size={25} className="ml-2" />
         {btn_title}
       </Btn>
       {isOpen && (
         <div className=" flex items-center justify-center">
           <div className="fixed inset-0 bg-gray-800 bg-opacity-70 flex items-center justify-center z-50">
             <div className="bg-white dark:bg-slate-500 dark:text-gray-800 rounded-lg shadow-lg max-md:w-2/3 w-1/3 p-6">
-              <h2 className="text-xl font-semibold mb-4 dark:text-white">{modul_title}</h2>
+              <h2 className="text-xl font-semibold mb-4 dark:text-white">
+                {modul_title}
+              </h2>
               <div className=" mb-6">{children}</div>
               <div className="flex justify-end">
                 <button

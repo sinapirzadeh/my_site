@@ -9,7 +9,7 @@ export default function BlogFilter() {
             value="html"
             className="peer hidden"
           />
-          <span className="dark:text-white tracking-widest peer-checked:bg-gradient-to-r peer-checked:from-[blueviolet] peer-checked:to-[violet] peer-checked:text-white text-gray-700 p-2 rounded-lg transition duration-150 ease-in-out">
+          <span className="dark:text-white border-2 peer-checked:bg-gradient-to-r peer-checked:from-[blueviolet] peer-checked:to-[violet] peer-checked:text-white text-gray-700 p-2 rounded-lg transition duration-150 ease-in-out">
             جدید
           </span>
         </label>
@@ -21,7 +21,7 @@ export default function BlogFilter() {
             value="react"
             className="peer hidden"
           />
-          <span className="dark:text-white tracking-widest peer-checked:bg-gradient-to-r peer-checked:from-[blueviolet] peer-checked:to-[violet] peer-checked:text-white text-gray-700 p-2 rounded-lg transition duration-150 ease-in-out">
+          <span className="dark:text-white border-2 peer-checked:bg-gradient-to-r peer-checked:from-[blueviolet] peer-checked:to-[violet] peer-checked:text-white text-gray-700 p-2 rounded-lg transition duration-150 ease-in-out">
             قدیمی
           </span>
         </label>
@@ -33,7 +33,7 @@ export default function BlogFilter() {
             value="vue"
             className="peer hidden"
           />
-          <span className="dark:text-white tracking-widest peer-checked:bg-gradient-to-r peer-checked:from-[blueviolet] peer-checked:to-[violet] peer-checked:text-white text-gray-700 p-2 rounded-lg transition duration-150 ease-in-out">
+          <span className="dark:text-white border-2 peer-checked:bg-gradient-to-r peer-checked:from-[blueviolet] peer-checked:to-[violet] peer-checked:text-white text-gray-700 p-2 rounded-lg transition duration-150 ease-in-out">
             کامنت
           </span>
         </label>
@@ -45,7 +45,7 @@ export default function BlogFilter() {
             value="vue"
             className="peer hidden"
           />
-          <span className="dark:text-white tracking-widest peer-checked:bg-gradient-to-r peer-checked:from-[blueviolet] peer-checked:to-[violet] peer-checked:text-white text-gray-700 p-2 rounded-lg transition duration-150 ease-in-out">
+          <span className="dark:text-white border-2 peer-checked:bg-gradient-to-r peer-checked:from-[blueviolet] peer-checked:to-[violet] peer-checked:text-white text-gray-700 p-2 rounded-lg transition duration-150 ease-in-out">
             بازدید
           </span>
         </label>

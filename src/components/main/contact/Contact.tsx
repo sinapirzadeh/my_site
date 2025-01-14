@@ -95,7 +95,7 @@ export default function Contact() {
                     ></textarea>
                   </div>
                   <button
-                    className="w-full bg-blue-400 text-white dark:bg-yellow-300 dark:text-gray-800 py-2 px-4 rounded-lg hover:bg-indigo-400 transition duration-300"
+                    className="w-full bg-blue-400 text-white dark:bg-blue-500 py-2 px-4 rounded-lg hover:bg-indigo-500 transition duration-300"
                     type="submit"
                   >
                     ارسال پیام
