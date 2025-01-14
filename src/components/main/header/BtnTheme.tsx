@@ -34,39 +34,36 @@ export default function BtnTheme() {
   };
 
   return (
-    <div className="flex items-center">
-      <div className=" ml-2 "><BtnLan /></div>
-      <motion.button
-        className="p-4 bg-blue-600 text-white rounded-full shadow-lg"
-        onClick={toggleTheme}
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9, rotate: 15 }}
-        transition={{ type: "spring", stiffness: 300 }}
-      >
-        <AnimatePresence mode="wait">
-          {isDark ? (
-            <motion.div
-              key="sun"
-              initial={{ opacity: 0, scale: 0.5, rotate: -90 }}
-              animate={{ opacity: 1, scale: 1, rotate: 0 }}
-              exit={{ opacity: 0, scale: 0.5, rotate: 90 }}
-              transition={{ duration: 0.4 }}
-            >
-              <HiOutlineSun size={25} />
-            </motion.div>
-          ) : (
-            <motion.div
-              key="moon"
-              initial={{ opacity: 0, scale: 0.5, rotate: 90 }}
-              animate={{ opacity: 1, scale: 1, rotate: 0 }}
-              exit={{ opacity: 0, scale: 0.5, rotate: -90 }}
-              transition={{ duration: 0.4 }}
-            >
-              <HiMiniMoon size={25} />
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </motion.button>
-    </div>
+    <motion.button
+      className="p-4 bg-blue-600 text-white rounded-full shadow-lg"
+      onClick={toggleTheme}
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.9, rotate: 15 }}
+      transition={{ type: "spring", stiffness: 300 }}
+    >
+      <AnimatePresence mode="wait">
+        {isDark ? (
+          <motion.div
+            key="sun"
+            initial={{ opacity: 0, scale: 0.5, rotate: -90 }}
+            animate={{ opacity: 1, scale: 1, rotate: 0 }}
+            exit={{ opacity: 0, scale: 0.5, rotate: 90 }}
+            transition={{ duration: 0.4 }}
+          >
+            <HiOutlineSun size={25} />
+          </motion.div>
+        ) : (
+          <motion.div
+            key="moon"
+            initial={{ opacity: 0, scale: 0.5, rotate: 90 }}
+            animate={{ opacity: 1, scale: 1, rotate: 0 }}
+            exit={{ opacity: 0, scale: 0.5, rotate: -90 }}
+            transition={{ duration: 0.4 }}
+          >
+            <HiMiniMoon size={25} />
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.button>
   );
 }

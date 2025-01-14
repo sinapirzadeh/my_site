@@ -6,12 +6,12 @@ export async function getBlog() {
   return data.data;
 }
 
-export async function getArticle(slug: String) {
+export async function getArticle(slug: string) {
   const { data } = await api.get(`articles/${slug}`);
   return data.data;
 }
 
-export async function getLike(slug: String) {
+export async function getLike(slug: string) {
   const { data } = await api.get(`articles/like/${slug}`);
   return data.message;
 }
@@ -22,9 +22,9 @@ export async function postComment(data: ICommentType) {
 }
 
 export async function getPagination() {
-  const {page, ad_type} = queryKey[1] as AdsPageParams
+  const { page, ad_type } = queryKey[1] as AdsPageParams;
   if (ad_type != "all") {
-    url += "?add"
+    url += "?add";
   }
-  const r = await api.get('articles')
+  const r = await api.get("articles");
 }

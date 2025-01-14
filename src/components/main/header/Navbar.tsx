@@ -70,7 +70,13 @@ export default function Navbar() {
             </ul>
 
             {/* <!-- Dark Lighe Model Buttom --> */}
-            <BtnTheme />
+            <div className="flex items-center">
+              {/* <div className=" ml-2 ">
+              <BtnLan />
+              </div> */}
+
+              <BtnTheme />
+            </div>
           </nav>
         </div>
       </Container>

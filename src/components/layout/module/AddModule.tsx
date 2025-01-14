@@ -4,8 +4,8 @@ import { HiOutlinePlus } from "react-icons/hi2";
 
 type TChildrenType = {
   children: React.ReactNode;
-  modul_title: String;
-  btn_title: String;
+  modul_title: string;
+  btn_title: string;
 };
 export default function AddModal({
   children,
