@@ -4,7 +4,7 @@ import Container from "../../container/Container";
 import LoadingProfile from "../../layout/loadings/LoadingProfile";
 import { IProfileType } from "../../types/types";
 import ProfileAbout from "./ProfileAbout";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 
 export default function Profile() {
   const { data: profile, isLoading } = useGetData<IProfileType>(

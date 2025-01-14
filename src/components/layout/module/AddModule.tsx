@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Btn from "../Btns/Btn";
+import { motion } from "framer-motion";
 import { HiOutlinePlus } from "react-icons/hi2";
 
 type TChildrenType = {
@@ -28,7 +29,12 @@ export default function AddModal({
         {btn_title}
       </Btn>
       {isOpen && (
-        <div className=" flex items-center justify-center">
+        <motion.div
+          animate={{ opacity: [0, 1] }}
+          transition={{ duration: 0.5 }}
+          exit={{ opacity: 0 }}
+          className=" flex items-center justify-center"
+        >
           <div className="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center z-50">
             <div className="bg-white dark:bg-slate-500  rounded-lg shadow-lg max-md:w-2/3 w-1/3 p-6">
               <h2 className="text-xl font-semibold mb-4">{modul_title}</h2>
@@ -43,7 +49,7 @@ export default function AddModal({
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       )}
     </>
   );

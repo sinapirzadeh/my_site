@@ -1,4 +1,4 @@
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import { HiMiniLanguage } from "react-icons/hi2";
 
 export default function BtnLan() {

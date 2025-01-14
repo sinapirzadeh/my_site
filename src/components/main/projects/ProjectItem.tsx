@@ -1,4 +1,4 @@
-import { motion, useInView } from "motion/react";
+import { motion, useInView } from "framer-motion";
 import image from "../../../../public/images/projects/3.jpg";
 import { useRef } from "react";
 

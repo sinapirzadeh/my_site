@@ -2,7 +2,7 @@ import { HiArrowLeft, HiOutlineDocumentText } from "react-icons/hi2";
 import { Link } from "react-router-dom";
 import Container from "../../container/Container";
 import ArticleItem from "./ArticleItem";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import LoadingProjectArticle from "../../layout/loadings/LoadingProjectArticle";
 import { useGetData } from "../../../hooks/api/useGetData";
 import { getArticlesHome } from "../../../services/site/HomeApi";

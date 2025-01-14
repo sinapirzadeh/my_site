@@ -11,7 +11,7 @@ import Container from "../../container/Container";
 import BtnTheme from "./BtnTheme";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { useState } from "react";
-import { AnimatePresence, motion } from "motion/react";
+import { AnimatePresence, motion } from "framer-motion";
 
 export default function Navbar() {
   const [menu, setMenu] = useState<boolean>(false);

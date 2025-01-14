@@ -1,9 +1,11 @@
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 
 export default function NotFound() {
   return (
     <div className="text-center space-y-5 my-20 dark:text-white px-20">
-      <h1 className="text-2xl mb-10 text-red-600">صفحه مورد نظر شما پیدا نشد</h1>
+      
+      <h1 className="text-6xl my-3">404</h1>
+      <h2 className="text-2xl mb-10 text-red-600">صفحه مورد نظر شما پیدا نشد</h2>
       <div className="grid grid-cols-2 gap-10">
         <div>
           <p>

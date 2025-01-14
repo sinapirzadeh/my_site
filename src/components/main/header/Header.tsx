@@ -1,6 +1,6 @@
 import { HiOutlineChatBubbleBottomCenterText } from "react-icons/hi2";
 import Navbar from "./Navbar";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 
 export default function Header() {
   return (

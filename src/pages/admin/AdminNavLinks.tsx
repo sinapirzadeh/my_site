@@ -3,7 +3,6 @@ import {
   HiOutlineChatBubbleBottomCenterText,
   HiOutlineCommandLine,
   HiOutlineDocumentText,
-  HiOutlineEnvelope,
   HiOutlineIdentification,
   HiOutlineSquares2X2,
 } from "react-icons/hi2";
@@ -102,23 +101,9 @@ export default function AdminNavLinks() {
         >
           <HiOutlineChatBubbleBottomCenterText size={30} />
           <span className="mr-2">پیام ها</span>
-          <span className="bg-red-500 rounded-full  p-1 mr-5 text-white"><IoAlert size={15}/></span>
-        </NavLink>
-      </li>
-      <li>
-        <NavLink
-          className={({ isActive }) =>
-            `hover:text-blue-600 hover:dark:text-blue-400 transition-colors flex items-center ${
-              isActive
-                ? "dark:text-white text-gray-900"
-                : "dark:text-slate-300 text-gray-600"
-            }`
-          }
-          to="/admin/contact"
-        >
-          <HiOutlineEnvelope size={30} />
-          <span className="mr-2">تماس ها</span> 
-          <span className="bg-red-500 rounded-full  p-1 mr-5 text-white"><IoAlert size={15}/></span>
+          <span className="bg-red-500 rounded-full  p-1 mr-5 text-white">
+            <IoAlert size={15} />
+          </span>
         </NavLink>
       </li>
       <li>

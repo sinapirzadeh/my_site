@@ -1,4 +1,4 @@
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import Btn from "../../../components/layout/Btns/Btn";
 import { HiOutlineTrash } from "react-icons/hi2";
 import AddSkill from "./AddSkill";

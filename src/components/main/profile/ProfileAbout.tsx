@@ -10,7 +10,7 @@ import node from "../../../assets/programmin_logo/nodejs.svg";
 import figma from "../../../assets/programmin_logo/figma.svg";
 import flutter from "../../../assets/programmin_logo/flutter.svg";
 import ai from "../../../assets/programmin_logo/ai.svg";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 
 export default function ProfileAbout(profile: IProfileType) {
   return (

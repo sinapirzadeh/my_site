@@ -1,7 +1,6 @@
-import { AnimatePresence, motion } from "motion/react";
+import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { HiMiniMoon, HiOutlineSun } from "react-icons/hi2";
-import BtnLan from "./BtnLan";
 
 export default function BtnTheme() {
   const [isDark, setIsDark] = useState(false);

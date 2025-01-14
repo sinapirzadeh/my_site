@@ -1,24 +1,21 @@
-import { useState } from "react";
 import EditModule from "../../../components/layout/module/EditModule";
-import { IProfileType } from "../../../components/types/types";
 
 export default function EditProfile() {
-  const [title, setTitle] = useState<string>("");
-  const [short_des, setShortDec] = useState<string>("");
-  const [telegram_url, setTelegram] = useState<string>("");
-  const [linkedin_url, setLinkedin] = useState<string>("");
-  const [github_url, setGithub] = useState<string>("");
-  const [rezome_url, setRezome] = useState<string>("");
-  const [description, setDescription] = useState<string>("");
+  // const [title, setTitle] = useState<string>("");
+  // const [short_des, setShortDec] = useState<string>("");
+  // const [telegram_url, setTelegram] = useState<string>("");
+  // const [linkedin_url, setLinkedin] = useState<string>("");
+  // const [github_url, setGithub] = useState<string>("");
+  // const [rezome_url, setRezome] = useState<string>("");
+  // const [description, setDescription] = useState<string>("");
 
-  const {data, isLoading, error} = postData<IProfileType>() 
+  // const { data, isLoading, error } = postData<IProfileType>();
 
   return (
     <EditModule modul_title="پروفایل" btn_title={"پروفایل"}>
       <form>
         <div className="gap-5 mb-4 grid grid-cols-2 max-sm:grid-cols-1">
           <input
-            onChange={(e) => setTitle(e.target.value)}
             className="w-full px-4 py-2 bg-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 transition duration-300"
             placeholder="نام"
             type="text"

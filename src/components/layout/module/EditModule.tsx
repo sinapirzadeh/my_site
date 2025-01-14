@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Btn from "../Btns/Btn";
 import { HiOutlinePencilSquare } from "react-icons/hi2";
+import { motion } from "framer-motion";
 
 type TChildrenType = {
   children: React.ReactNode;
@@ -19,12 +20,20 @@ export default function EditModule({
 
   return (
     <>
-      <Btn onClick={openModal} bg_color="bg-blue-600" customClasses="mt-5 flex">
+      <Btn
+        onClick={openModal}
+        bg_color="bg-yellow-500"
+        customClasses="mt-5 flex"
+      >
         <HiOutlinePencilSquare size={25} className="ml-2" />
         {btn_title}
       </Btn>
       {isOpen && (
-        <div className=" flex items-center justify-center">
+        <motion.div
+          animate={{ opacity: [0, 1] }}
+          transition={{ duration: 0.5 }}
+          className=" flex items-center justify-center"
+        >
           <div className="fixed inset-0 bg-gray-800 bg-opacity-70 flex items-center justify-center z-50">
             <div className="bg-white dark:bg-slate-500 dark:text-gray-800 rounded-lg shadow-lg max-md:w-2/3 w-1/3 p-6">
               <h2 className="text-xl font-semibold mb-4 dark:text-white">
@@ -41,7 +50,7 @@ export default function EditModule({
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       )}
     </>
   );

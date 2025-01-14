@@ -1,4 +1,4 @@
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import { FaLink } from "react-icons/fa";
 import copy from "copy-to-clipboard";
 import { toast } from "react-toastify";

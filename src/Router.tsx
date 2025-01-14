@@ -5,10 +5,10 @@ import Article from "./pages/Article";
 import NotFound from "./pages/NotFound";
 import ProfilePanel from "./pages/admin/profile/ProfilePanel";
 import SkillsPanel from "./pages/admin/skills/SkillsPanel";
-import ContactPanel from "./pages/admin/contact/ContactPanel";
 import MessagePanel from "./pages/admin/message/MessagePanel";
 import AdminPanel from "./pages/admin/AdminPanel";
 import Layout from "./components/layout/Layout";
+import Dashbord from "./pages/admin/dashbord/Dashbord";
 
 const router = createBrowserRouter([
   {
@@ -29,10 +29,10 @@ const router = createBrowserRouter([
     path: "admin",
     element: <AdminPanel />,
     children: [
+      { path: "", element: <Dashbord /> },
       { path: "profile", element: <ProfilePanel /> },
       { path: "skills", element: <SkillsPanel /> },
       { path: "messages", element: <MessagePanel /> },
-      { path: "contact", element: <ContactPanel /> },
     ],
   },
   { path: "*", element: <NotFound /> },

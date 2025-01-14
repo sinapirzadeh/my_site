@@ -1,4 +1,4 @@
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import { HiArrowSmallLeft, HiArrowSmallRight } from "react-icons/hi2";
 
 export default function Pagination() {
