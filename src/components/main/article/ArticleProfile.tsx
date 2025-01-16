@@ -13,7 +13,7 @@ export default function ArticleProfile() {
     getProfile
   );
   return (
-    <div className="flex items-center p-3  h-28 bg-white dark:bg-gray-700 dark:text-white rounded-md shadow-lg">
+    <div className="flex items-center p-3  border-2 h-28 bg-white dark:bg-gray-700 dark:text-white rounded-md shadow-lg">
       {isLoading ? (
         <ArticleProfileLoading />
       ) : (
@@ -41,19 +41,19 @@ export default function ArticleProfile() {
             <div className="flex gap-3 pt-2 pl-3 items-center">
               <a href={data?.linkedin_url}>
                 <TbBrandLinkedin
-                  size={20}
+                  size={25}
                   className="hover:scale-125 duration-200 hover:cursor-pointer "
                 />
               </a>
               <a href={data?.telegram_url}>
                 <RiTelegramLine
-                  size={20}
+                  size={25}
                   className="hover:scale-125 duration-200 hover:cursor-pointer "
                 />
               </a>
               <a href={data?.github_url}>
                 <FiGithub
-                  size={17}
+                  size={22}
                   className="hover:scale-125 duration-200 hover:cursor-pointer "
                 />
               </a>

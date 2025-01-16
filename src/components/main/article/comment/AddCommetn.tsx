@@ -22,21 +22,22 @@ export default function AddComment() {
 
     setLoading(true);
     try {
-      await postComment({ name, message, is_delete: false, is_trusted: true });
+      await postComment({ name, message, is_delete: false, is_trusted: false });
       setName("");
       setMessage("");
-    } catch (err) {
-      toast.error("مشکلی به وجود امده:2332");
+      toast.success("نظر شما بعد تایید قرار خواهد گرفت.");
+    } catch {
+      toast.error("مشکلی به وجود امده");
     } finally {
       setLoading(false);
     }
   };
 
   return (
-    <div className="bg-white dark:bg-gray-700 dark:text-white rounded-xl p-4">
-      {error && (
+    <div className="bg-white border-2 dark:bg-gray-700 dark:text-white rounded-xl p-4">
+      {(error as string) && (
         <p className="p-3 text-white bg-red-800 bg-opacity-75 rounded-lg w-auto">
-          {error}
+          {error as string}
         </p>
       )}
       <h5 className="text-xl font-bold col-span-6 my-4">افزودن نظر</h5>

@@ -11,8 +11,9 @@ export default function SkillItem({ title, process }: ISkillType) {
       animate={{ opacity: [0, 1] }}
       transition={{ delay: 0.2 }}
       dir="ltr"
-      className="bg-white dark:bg-gray-600 rounded-lg p-5 shadow-md"
+      className=" rounded-lg p-5 shadow-md bg-gradient-to-r from-transparent via-rose-500 to-transparent"
     >
+      {/* bg-white dark:bg-gray-600 */}
       <div className="flex justify-between mb-2">
         <span className="text-blue-700 dark:text-white">{title}</span>
         <span className="text-blue-700 dark:text-white">{`${process}%`}</span>

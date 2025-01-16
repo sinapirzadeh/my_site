@@ -2,9 +2,9 @@ import Container from "../../container/Container";
 
 export default function Footer() {
   return (
-    <footer>
+    <footer className="max-md:mb-20">
       <Container>
-        <p className="dark:text-white text-center  my-10 text-lg rounded ">
+        <p className="max-md:hidden dark:text-white text-center mt-20  my-10 text-lg rounded ">
           سایت شخصی سینا پیرزاده
         </p>
       </Container>

@@ -1,4 +1,7 @@
-import { HiArrowLeft, HiOutlineDocumentText } from "react-icons/hi2";
+import {
+  HiOutlineArrowSmallLeft,
+  HiOutlineDocumentText,
+} from "react-icons/hi2";
 import { Link } from "react-router-dom";
 import Container from "../../container/Container";
 import ArticleItem from "./ArticleItem";
@@ -24,12 +27,12 @@ export default function HomeArticles() {
           <motion.div
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
-            className="hover:animate-jump p-2 bg-blue-500 rounded-md text-white flex"
+            className="border-2 p-2 bg-blue-500 rounded-md text-white flex"
           >
             <Link to={"/blog"} className="pl-3">
               مشاهده همه
             </Link>
-            <HiArrowLeft size={25} />
+            <HiOutlineArrowSmallLeft size={25} />
           </motion.div>
         </div>
         {isLoading && <LoadingProjectArticle />}

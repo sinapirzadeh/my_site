@@ -20,16 +20,16 @@ export default function Article() {
     (data) => data
   );
 
-  let formater = Intl.DateTimeFormat("pr-ir", {
+  const formater = Intl.DateTimeFormat("pr-ir", {
     year: "numeric",
     month: "short",
     day: "2-digit",
   });
 
   return (
-    <section id="article-detail" className="mx-5 md:mx-24 mb-10 mt-8 z-0">
+    <section id="article-detail" className="mb-10 mt-8 z-0">
       <Container>
-        <div className="bg-white my-8 dark:text-white dark:bg-gray-600 py-2 px-3 rounded-lg shadow-md ">
+        <div className="bg-white my-8 dark:text-white dark:bg-gray-600 py-2 px-3 rounded-lg shadow-md border-2">
           <Helmet>
             <title>{article?.title}</title>
             <meta name="description" content={article?.meta_description} />
@@ -48,7 +48,7 @@ export default function Article() {
         </div>
 
         <div className="grid grid-cols-12 gap-5 ">
-          <div className="col-span-9 max-lg:col-span-12 bg-white dark:bg-gray-700 shadow-md rounded-lg dark:text-gray-200">
+          <div className="col-span-9 max-lg:col-span-12 bg-white dark:bg-gray-700 shadow-md rounded-lg dark:text-gray-200 border-2">
             {isLoading ? (
               <ArticleDetailLoding />
             ) : (
@@ -62,7 +62,7 @@ export default function Article() {
                     <span className="flex items-center bg-cyan-700 p-2 rounded-lg shadow-lg">
                       <span className="pl-2">
                         {formater.format(
-                          Date.parse(article?.updatedAt || "2500-12-4")
+                          Date.parse(article?.updatedAt || "2025-12-4")
                         )}
                       </span>
                       <FaClock size={25} />
@@ -72,7 +72,9 @@ export default function Article() {
                       <FaHeart size={25} />
                     </span> */}
                     <span className="flex items-center bg-blue-500 p-2 rounded-lg shadow-lg">
-                      <span className="pl-2">{article?.comments_count}</span>
+                      {article?.comments_count && (
+                        <span className="pl-2">{article?.comments_count}</span>
+                      )}
                       <FaCommentAlt size={25} />
                     </span>
                   </div>
