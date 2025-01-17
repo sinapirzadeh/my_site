@@ -8,13 +8,11 @@ export default function AdminPanel() {
     <div>
       <Header />
       <Container>
-        <div className="grid grid-cols-12 my-20 mx-5 gap-5">
-          <div className="col-span-3 max-md:col-span-12 bg-slate-300 dark:bg-slate-500 rounded-lg p-10 dark:text-gray-300 ">
-            <AdminNavLinks />
-          </div>
-          <div className="col-span-9 max-md:col-span-12 bg-slate-300 dark:bg-slate-500 rounded-lg p-5 dark:text-white  h-[550px] overflow-y-scroll">
-            <Outlet />
-          </div>
+        <div className="my-5 bg-slate-300 dark:bg-slate-500 rounded-lg border-2 dark:text-gray-300 ">
+          <AdminNavLinks />
+        </div>
+        <div className="border-2 bg-slate-300 dark:bg-slate-500 rounded-lg p-5 dark:text-white  h-[550px] overflow-y-scroll">
+          <Outlet />
         </div>
       </Container>
     </div>

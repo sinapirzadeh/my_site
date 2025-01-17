@@ -1,18 +1,8 @@
-import EditModule from "../../../components/layout/module/EditModule";
+import React from "react";
 
-export default function EditProfile() {
-  // const [title, setTitle] = useState<string>("");
-  // const [short_des, setShortDec] = useState<string>("");
-  // const [telegram_url, setTelegram] = useState<string>("");
-  // const [linkedin_url, setLinkedin] = useState<string>("");
-  // const [github_url, setGithub] = useState<string>("");
-  // const [rezome_url, setRezome] = useState<string>("");
-  // const [description, setDescription] = useState<string>("");
-
-  // const { data, isLoading, error } = postData<IProfileType>();
-
+export default function AddArticle() {
   return (
-    <EditModule modul_title="پروفایل" btn_title={"پروفایل"}>
+    <div>
       <form>
         <div className="gap-5 mb-4 grid grid-cols-3 max-sm:grid-cols-1 ">
           <input
@@ -69,12 +59,12 @@ export default function EditProfile() {
           required
         ></textarea>
         <button
-          className="w-full bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600 transition duration-300"
+          className="mx-auto bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600 transition duration-300"
           type="submit"
         >
           اعمال
         </button>
       </form>
-    </EditModule>
+    </div>
   );
 }

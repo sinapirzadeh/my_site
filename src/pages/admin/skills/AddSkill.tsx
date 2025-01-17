@@ -6,13 +6,13 @@ export default function AddSkill() {
       <form>
         <div className="gap-5 mb-4 grid grid-cols-2 max-sm:grid-cols-1">
           <input
-            className="w-full px-4 py-2 bg-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 transition duration-300"
+            className="w-full px-4 text-gray-600 py-2 bg-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 transition duration-300"
             placeholder="نام تان را وارد کنید"
             type="text"
             required
           />
           <input
-            className="w-full px-4 py-2 bg-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 transition duration-300"
+            className="w-full px-4 text-gray-600 py-2 bg-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500 transition duration-300"
             placeholder="درصد پیشرفت تان را وارد کنید"
             type="number"
             min={1}

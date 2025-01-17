@@ -9,6 +9,9 @@ import MessagePanel from "./pages/admin/message/MessagePanel";
 import AdminPanel from "./pages/admin/AdminPanel";
 import Layout from "./components/layout/Layout";
 import Dashbord from "./pages/admin/dashbord/Dashbord";
+import ProjectsPanel from "./pages/admin/projects/ProjectsPanel";
+import ArticlesPanel from "./pages/admin/articles/ArticlesPanel";
+import AddArticle from "./pages/admin/articles/AddArticle";
 
 const router = createBrowserRouter([
   {
@@ -32,6 +35,9 @@ const router = createBrowserRouter([
       { path: "", element: <Dashbord /> },
       { path: "profile", element: <ProfilePanel /> },
       { path: "skills", element: <SkillsPanel /> },
+      { path: "projects", element: <ProjectsPanel /> },
+      { path: "articles", element: <ArticlesPanel /> },
+      { path: "articles/add", element: <AddArticle /> },
       { path: "messages", element: <MessagePanel /> },
     ],
   },
