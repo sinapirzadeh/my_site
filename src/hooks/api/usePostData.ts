@@ -1,15 +1,30 @@
-import { useMutation } from "@tanstack/react-query";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 
 export function usePostData<T, U>(
   postFunction: (data: T) => Promise<U>,
-  onSuccess?: (data: U) => void,
+  onSuccessKey: string,
+  onSuccess?: () => void,
   onError?: (error: unknown) => void
 ) {
-  const { mutate, error, data } = useMutation({
-    mutationFn: postFunction,
-    onSuccess,
-    onError,
-  });
+  const clent = useQueryClient();
+  const { mutate, error, data, isPending, isError, isSuccess, reset } =
+    useMutation<U, unknown, T>({
+      mutationFn: postFunction,
+      onSuccess: () => {
+        clent.invalidateQueries({ queryKey: [onSuccessKey] });
+      },
+      onError: (error) => {
+        if (onError) onError(error);
+      },
+    });
 
-  return { mutate, error, data };
+  return {
+    mutate,
+    error,
+    data,
+    isPending,
+    isError,
+    isSuccess,
+    reset,
+  };
 }

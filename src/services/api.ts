@@ -2,7 +2,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 
 const api = axios.create({
-  baseURL: "",
+  baseURL: "http://localhost:3000/api/",
 });
 
 api.interceptors.response.use(

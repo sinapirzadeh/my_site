@@ -5,14 +5,6 @@ import { ICommentType } from "../../../types/types";
 import { toast } from "react-toastify";
 
 export default function AddComment() {
-  const [name, setName] = useState<string>("");
-  const [message, setMessage] = useState<string>("");
-  const [loading, setLoading] = useState<boolean>(false);
-
-  const { error } = usePostData<ICommentType, React.ReactNode>(() =>
-    postComment({ name, message, is_delete: false, is_trusted: true })
-  );
-
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!name.trim() || !message.trim()) {

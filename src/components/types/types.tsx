@@ -1,11 +1,12 @@
 export interface ISkillType {
-  id: number;
+  _id: string;
   title: string;
   process: number;
+  is_delete: boolean;
 }
 
 export interface IProfileType {
-  id: number;
+  _id: string;
   name: string;
   short_des: string;
   descirption: string;
@@ -18,7 +19,7 @@ export interface IProfileType {
 }
 
 export interface IProjectType {
-  id: number;
+  _id: string;
   name: string;
   frameworks: [string];
   image_url: string;
@@ -26,7 +27,7 @@ export interface IProjectType {
 }
 
 export interface IArticleType {
-  id: number;
+  _id: string;
   title: string;
   slug: string;
   description: string;
